@@ -1,13 +1,19 @@
-on: [push]
+name: "Deploy to FTP"
+
+on:
+  push:
+    branches:
+      - "main"
+
 jobs:
   deploy:
-    name: Deploy
+    name: "Deploy"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: "Checkout code"
         uses: actions/checkout@v3
         
-      - name: Deploy
+      - name: "Send to FTP"
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.HOST_ADDRESS }}
