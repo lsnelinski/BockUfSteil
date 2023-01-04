@@ -1,0 +1,21 @@
+{
+  "name": "bock-uf-steil",
+  "version": "1.0.0",
+  "description": "Website of the ski touring event \"Bock Uf Steil\"",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./tailwind/input.css -o ./static/css/bockufsteil.css --watch",
+    "prettier": "npx prettier --write **/*.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.2.1"
+  }
+}
