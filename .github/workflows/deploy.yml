@@ -12,6 +12,17 @@ jobs:
     steps:
       - name: "Checkout code"
         uses: actions/checkout@v3
+
+      - name: "Setup Node.js environment"
+        uses: actions/setup-node@v3.6.0
+
+      - name: "Install dependencies"
+        run: "cd source && npm i"
+        shell: bash
+
+      - name: "Build Tailwind"
+        run: "cd source && npm run build"
+        shell: bash
         
       - name: "Send to FTP"
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -19,6 +30,6 @@ jobs:
           server: ${{ secrets.HOST_ADDRESS }}
           username: ${{ secrets.HOST_USERNAME }}
           password: ${{ secrets.HOST_PASSWORD }}
-          local-dir: ./source/
+          local-dir: ./source/static
           server-dir: ./BockUfSteil/
           dangerous-clean-slate: true

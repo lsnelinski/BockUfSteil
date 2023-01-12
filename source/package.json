@@ -5,6 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "tailwind": "npx tailwindcss -i ./tailwind/input.css -o ./static/css/bockufsteil.css --watch",
+    "build": "npx tailwindcss -i ./tailwind/input.css -o ./static/css/bockufsteil.css",
     "prettier": "npx prettier --write **/*.html"
   },
   "keywords": [],
