@@ -66,8 +66,8 @@
     <div class="pb-4">
       <h2 class="text-2xl py-1">Information zum Rennen</h2>
       <p>Bock Uf Steil beginnt am 31. Januar 2025 um 17:00 Uhr mit dem Mittelberger Winterfest. Ein DJ sorgt für gute Stimmung 
-        bei Teilnehmern und Zuschauern. Das Rennen startet dann um 20:00 Uhr. Insgesamt gilt es 444 Höhenmeter und 4,4
-        Kilometer in 2 Runden zu absolvieren.</p>
+        bei Teilnehmern und Zuschauern. Das Rennen startet dann um 20:00 Uhr.<br>
+        Insgesamt sind 444 Höhenmeter und 4,4 Kilometer in zwei Runden zu bewältigen. Dabei gibt es auch eine Tragepassage, bei der die Ski abgeschnallt werden müssen.</p>
     </div>
     <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5">
       <div class="rounded overflow-hidden shadow-lg">
@@ -140,10 +140,17 @@
   </main>
   <footer>
     <div class="text-center text-gray-700 p-4">
-      <p>© 2024 - Powerd by Lukas Snelinski | <a class="text-black" href="impressum.html"><u>Impressum &
+      <p>© <span id="year"></span> - Powerd by Lukas Snelinski | <a class="text-black" href="impressum.html"><u>Impressum &
             Datenschutz</u></a></p>
     </div>
   </footer>
 </body>
+
+<!-- JavaScript -->
+<script>
+  const yearElement = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  yearElement.textContent = currentYear;
+</script>
 
 </html>
